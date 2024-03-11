@@ -6,9 +6,15 @@ function isPalindrome(frase) {
         }
     }
 
-    const fraseInvertida = fraseLimpa.split('').reverse().join('');
+    const length = fraseLimpa.length;
 
-    return fraseLimpa === fraseInvertida;
+    for (let i = 0; i < Math.floor(length / 2); i++) {
+        if (fraseLimpa[i] !== fraseLimpa[length - 1 - i]) {
+            return false;
+        }
+    }
+    
+    return true;
 }
 
 function arrayMaxMin(arr) {
